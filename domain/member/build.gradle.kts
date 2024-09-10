@@ -3,5 +3,5 @@ plugins {
 }
 
 dependencies {
-    implementation(projects.domain.base)
+    api(projects.domain.base)
 }

@@ -1,4 +1,4 @@
-package io.eunmin.pay.domain.base
+package io.eunmin.pay.domain.base.usecase
 
 abstract class Usecase<Params, Response> {
     protected abstract suspend fun execute(params: Params): Response

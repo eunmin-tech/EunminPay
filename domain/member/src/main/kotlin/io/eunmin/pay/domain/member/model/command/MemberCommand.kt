@@ -1,5 +1,7 @@
 package io.eunmin.pay.domain.member.model.command
 
+import io.eunmin.pay.domain.base.pattern.Patterns
+
 sealed interface MemberCommand {
     data class Register(
         val username: String,
@@ -8,5 +10,15 @@ sealed interface MemberCommand {
         val email: String,
         val address: String,
         val isCorp: Boolean,
-    ): MemberCommand
+    ): MemberCommand {
+        init {
+            require(username.isNotBlank()) { "Username must not be blank" }
+            require(password.isNotBlank()) { "Password must not be blank" }
+            require(Patterns.PASSWORD.matcher(password).matches()) { "Password must match Password" }
+            require(name.isNotBlank()) { "Name must not be blank" }
+            require(email.isNotBlank()) { "Email must not be blank" }
+            require(Patterns.EMAIL.matcher(email).matches()) { "Email must match Email" }
+            require(address.isNotBlank()) { "Address must not be blank" }
+        }
+    }
 }

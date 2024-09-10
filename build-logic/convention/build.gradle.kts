@@ -27,6 +27,10 @@ gradlePlugin {
             id = "eunmin.spring.application"
             implementationClass = "SpringApplicationConvention"
         }
+        register("SpringWebflux") {
+            id = "eunmin.spring.webflux"
+            implementationClass = "SpringWebfluxConvention"
+        }
         register("Library") {
             id = "eunmin.spring.library"
             implementationClass = "SpringLibraryConvention"

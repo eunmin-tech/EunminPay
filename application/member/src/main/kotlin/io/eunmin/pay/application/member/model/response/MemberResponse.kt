@@ -2,7 +2,7 @@ package io.eunmin.pay.application.member.model.response
 
 import java.time.LocalDateTime
 
-data class MemberResponse(
+internal data class MemberResponse(
     val memberId: Long,
     val username: String,
     val name: String,

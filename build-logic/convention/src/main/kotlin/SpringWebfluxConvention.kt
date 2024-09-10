@@ -3,13 +3,11 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 
-class R2dbcConvention: Plugin<Project> {
+class SpringWebfluxConvention: Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             dependencies {
-                "api"(libs.findLibrary("springboot-r2dbc").get())
-                "runtimeOnly"(libs.findLibrary("mysql-connector").get())
-                "runtimeOnly"(libs.findLibrary("mysql-r2dbc").get())
+                "implementation"(libs.findLibrary("springboot-webflux").get())
             }
         }
     }

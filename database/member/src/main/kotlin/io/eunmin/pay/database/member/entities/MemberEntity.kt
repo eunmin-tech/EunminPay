@@ -7,10 +7,15 @@ import java.time.LocalDateTime
 
 @Table(name = "member")
 data class MemberEntity(
-    @Id val id: Long,
     val username: String,
     val password: String,
     val name: String,
     val email: String,
-    val deletedAt: LocalDateTime?
-): BaseEntity()
+    val deletedAt: LocalDateTime?,
+    @Id val id: Long? = null,
+): BaseEntity() {
+    companion object {
+        fun create(username: String, password: String, name: String, email: String): MemberEntity =
+            MemberEntity(username, password, name, email, null, null)
+    }
+}

@@ -1,9 +1,9 @@
 plugins {
     id("eunmin.spring.application")
+    id("eunmin.spring.webflux")
 }
 
 dependencies {
     implementation(projects.domain.member)
-
-    implementation(libs.springboot.webflux)
+    implementation(projects.infrastructure.member)
 }
