@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.*
 internal class MemberController(
     private val registerMemberUsecase: RegisterMemberUsecase
 ) {
-    @GetMapping("/{memberId}")
-    suspend fun findMemberById(@PathVariable("memberId") memberId: String): ResponseEntity<BaseResponse<MemberResponse>> {
-
-    }
+//    @GetMapping("/{memberId}")
+//    suspend fun findMemberById(@PathVariable("memberId") memberId: String): ResponseEntity<BaseResponse<MemberResponse>> {
+//
+//    }
 
     @PostMapping
     suspend fun create(@RequestBody member: RegisterMemberRequest): ResponseEntity<BaseResponse<MemberResponse>> =
