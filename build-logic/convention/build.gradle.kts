@@ -36,7 +36,7 @@ gradlePlugin {
             implementationClass = "SpringLibraryConvention"
         }
         register("R2dbc") {
-            id = "eunmin.r2dbc"
+            id = "eunmin.spring.r2dbc"
             implementationClass = "R2dbcConvention"
         }
     }

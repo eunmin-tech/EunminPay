@@ -28,14 +28,17 @@ rootProject.name = "EunminPay"
 include(":common")
 
 include(
-    ":application:member"
+    ":msa:config",
+    ":msa:eureka",
+    ":msa:gateway",
 )
 
-include( // Domain
-    ":domain:base",
-    ":domain:member"
+include(
+    ":modules:membership",
+    ":modules:auth",
+    ":modules:banking",
+    ":modules:payment",
+    ":modules:money",
+    ":modules:remittance",
+    ":modules:settlement"
 )
-
-include(":infrastructure:member")
-
-include(":database:member")
