@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/v1/members")
-internal class MemberController(
+class MemberController(
     private val findMemberByIdUsecase: FindMemberByIdUsecase,
     private val registerMemberUsecase: RegisterMemberUsecase
 ) {

@@ -1,4 +1,4 @@
-package io.eunmin.pay.domain.base.pattern
+package io.eunmin.pay.common.pattern
 
 object Patterns {
     val EMAIL = "[0-9a-zA-Z]+(.[_a-z0-9-]+)*@(?:\\w+\\.)+\\w+$".toPattern()

@@ -1,8 +1,8 @@
-package io.eunmin.pay.application.member.model.response
+package io.eunmin.pay.member.application.query.dto.response
 
 import java.time.LocalDateTime
 
-data class MemberResponse(
+internal data class MemberResponse(
     val memberId: Long,
     val username: String,
     val name: String,

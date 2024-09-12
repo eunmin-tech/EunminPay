@@ -31,12 +31,16 @@ gradlePlugin {
             id = "eunmin.spring.webflux"
             implementationClass = "SpringWebfluxConvention"
         }
-        register("Library") {
+        register("SpringLibrary") {
             id = "eunmin.spring.library"
             implementationClass = "SpringLibraryConvention"
         }
+        register("Domain") {
+            id = "eunmin.domain"
+            implementationClass = "DomainConvention"
+        }
         register("R2dbc") {
-            id = "eunmin.spring.r2dbc"
+            id = "eunmin.r2dbc"
             implementationClass = "R2dbcConvention"
         }
     }

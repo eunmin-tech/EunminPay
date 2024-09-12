@@ -23,9 +23,5 @@ private fun Project.configureSpringCommon() {
 
     dependencies {
         "implementation"(libs.findLibrary("springboot-starter").get())
-
-        if (!name.contains("common", ignoreCase = true)) {
-            "implementation"(project(":common"))
-        }
     }
 }

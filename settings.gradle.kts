@@ -33,12 +33,18 @@ include(
     ":msa:gateway",
 )
 
+//include(
+//    ":authentication:application-command",
+//    ":authentication:application-query",
+//    ":authentication:domain",
+//    ":authentication:infrastructure",
+//    ":authentication:database"
+//)
+
 include(
-    ":modules:membership",
-    ":modules:auth",
-    ":modules:banking",
-    ":modules:payment",
-    ":modules:money",
-    ":modules:remittance",
-    ":modules:settlement"
+    ":member:application-command",
+    ":member:application-query",
+    ":member:domain",
+    ":member:infrastructure",
+    ":member:database"
 )

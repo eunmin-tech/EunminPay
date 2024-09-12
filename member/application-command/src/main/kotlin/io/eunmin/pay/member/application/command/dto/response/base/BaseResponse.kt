@@ -1,6 +1,6 @@
-package io.eunmin.pay.application.member.model.response.base
+package io.eunmin.pay.member.application.command.dto.response.base
 
-data class BaseResponse<T>(
+internal data class BaseResponse<T>(
     val data: T
 ) {
     companion object {

@@ -7,7 +7,7 @@ class R2dbcConvention: Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             dependencies {
-                "implementation"(libs.findLibrary("springboot-r2dbc").get())
+                "api"(libs.findLibrary("springboot-r2dbc").get())
                 "runtimeOnly"(libs.findLibrary("mysql-connector").get())
                 "runtimeOnly"(libs.findLibrary("mysql-r2dbc").get())
             }

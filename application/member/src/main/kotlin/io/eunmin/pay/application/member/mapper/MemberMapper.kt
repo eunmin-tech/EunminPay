@@ -6,8 +6,8 @@ import io.eunmin.pay.domain.member.model.Member
 import io.eunmin.pay.domain.member.model.command.MemberCommand
 import io.eunmin.pay.domain.member.model.query.MemberQuery
 
-internal fun makeFindByIdQuery(memberId: Long): MemberQuery.FindById = MemberQuery.FindById(memberId)
+fun makeFindByIdQuery(memberId: Long): MemberQuery.FindById = MemberQuery.FindById(memberId)
 
-internal fun RegisterMemberRequest.toCommand() = MemberCommand.Register(username, password, name, email, address, isCorp)
+fun RegisterMemberRequest.toCommand() = MemberCommand.Register(username, password, name, email, address, isCorp)
 
-internal fun Member.toResponse() = MemberResponse(memberId, username, name, email, isDelete, createdAt, updatedAt, deletedAt)
+fun Member.toResponse() = MemberResponse(memberId, username, name, email, isDelete, createdAt, updatedAt, deletedAt)

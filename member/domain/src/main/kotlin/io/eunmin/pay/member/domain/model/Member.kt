@@ -1,14 +1,15 @@
-package io.eunmin.pay.application.member.model.response
+package io.eunmin.pay.member.domain.model
 
 import java.time.LocalDateTime
 
-data class MemberResponse(
+data class Member(
     val memberId: Long,
     val username: String,
     val name: String,
     val email: String,
-    val isDelete: Boolean,
     val createdAt: LocalDateTime,
     val updatedAt: LocalDateTime,
     val deletedAt: LocalDateTime?
-)
+) {
+    val isDelete: Boolean = deletedAt != null
+}
