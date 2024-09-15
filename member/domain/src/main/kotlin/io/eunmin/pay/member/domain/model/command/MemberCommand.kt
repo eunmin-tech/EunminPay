@@ -7,9 +7,7 @@ sealed interface MemberCommand {
         val username: String,
         val password: String,
         val name: String,
-        val email: String,
-        val address: String,
-        val isCorp: Boolean,
+        val email: String
     ): MemberCommand {
         init {
             require(username.isNotBlank()) { "Username must not be blank" }
@@ -18,7 +16,34 @@ sealed interface MemberCommand {
             require(name.isNotBlank()) { "Name must not be blank" }
             require(email.isNotBlank()) { "Email must not be blank" }
             require(Patterns.EMAIL.matcher(email).matches()) { "Email must match Email" }
-            require(address.isNotBlank()) { "Address must not be blank" }
         }
     }
+
+    data class Update(
+        val id: Long,
+        val username: String,
+        val name: String,
+        val email: String
+    ): MemberCommand {
+        init {
+            require(username.isNotBlank()) { "Username must not be blank" }
+            require(name.isNotBlank()) { "Name must not be blank" }
+            require(email.isNotBlank()) { "Email must not be blank" }
+            require(Patterns.EMAIL.matcher(email).matches()) { "Email must match Email" }
+        }
+    }
+
+    data class UpdatePassword(
+        val id: Long,
+        val oldPassword: String,
+        val newPassword: String
+    ): MemberCommand {
+        init {
+            require(oldPassword.isNotBlank()) { "Password must not be blank" }
+            require(newPassword.isNotBlank()) { "Password must not be blank" }
+            require(Patterns.PASSWORD.matcher(newPassword).matches()) { "Password must match Password" }
+        }
+    }
+
+    data class Delete(val id: Long): MemberCommand
 }

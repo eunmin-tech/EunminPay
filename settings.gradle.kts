@@ -42,8 +42,7 @@ include(
 //)
 
 include(
-    ":member:application-command",
-    ":member:application-query",
+    ":member:application",
     ":member:domain",
     ":member:infrastructure",
     ":member:database"

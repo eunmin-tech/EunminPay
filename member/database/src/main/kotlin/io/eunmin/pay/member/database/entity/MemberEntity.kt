@@ -18,4 +18,10 @@ data class MemberEntity(
         fun create(username: String, password: String, name: String, email: String): MemberEntity =
             MemberEntity(username, password, name, email, null, null)
     }
+
+    fun update(username: String, name: String, email: String): MemberEntity =
+        copy(username = username, name = name, email = email)
+
+    fun updatePassword(password: String): MemberEntity =
+        copy(password = password)
 }

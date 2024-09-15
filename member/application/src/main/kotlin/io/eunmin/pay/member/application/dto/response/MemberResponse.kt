@@ -1,4 +1,4 @@
-package io.eunmin.pay.member.application.query.dto.response
+package io.eunmin.pay.member.application.dto.response
 
 import java.time.LocalDateTime
 
